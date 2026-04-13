@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite templatemo_540_lava_landing_page",
-    "build": "vite build templatemo_540_lava_landing_page",
+    "build": "vite build templatemo_540_lava_landing_page --config vite.config.js",
     "preview": "vite preview"
   },
   "devDependencies": {

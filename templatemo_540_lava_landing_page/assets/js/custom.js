@@ -84,6 +84,7 @@
 				menu = target;
 			var $target = $(target);
 
+			if (!$target.length) return;
 			$('html, body').stop().animate({
 				'scrollTop': $target.offset().top
 			}, 500, 'swing', function () {
@@ -104,7 +105,7 @@
 				var currLink = $(this);
 				var refElement = $(currLink.attr("href"));
 
-				if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+				if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
 					$('.menu-item').removeClass("active");
 					currLink.addClass("active");
 				} else {
